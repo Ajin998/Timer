@@ -1,5 +1,4 @@
 var root = document.querySelector(".screen");
-// console.log(hours, minutes, seconds);
 var start_stop = document.querySelector("#startstop");
 var hours = 0;
 var minutes = 0;
@@ -21,22 +20,11 @@ const printTime = () => {
       minutes = 0;
       hours++;
     }
-  }
-  if (seconds < 10) {
-    d_seconds = "0" + seconds.toString();
-  } else {
-    d_seconds = seconds;
-  }
-  if (minutes < 10) {
-    d_minutes = "0" + minutes.toString();
-  } else {
-    d_minutes = minutes;
-  }
-  if (hours < 10) {
-    d_hours = "0" + hours.toString();
-  } else {
-    d_hours = hours;
-  }
+  } //
+  seconds < 10 ? (d_seconds = "0" + seconds.toString()) : (d_seconds = seconds);
+  minutes < 10 ? (d_minutes = "0" + minutes.toString()) : (d_minutes = minutes);
+  hours < 10 ? (d_hours = "0" + hours.toString()) : (d_hours = hours);
+
   root.innerHTML = d_hours + ":" + d_minutes + ":" + d_seconds;
 };
 
