@@ -1,15 +1,12 @@
 var root = document.querySelector(".screen");
 var start_stop = document.querySelector("#startstop");
-var hours = 0;
-var minutes = 0;
-var seconds = 0;
+var redo = document.querySelector("#reset");
+var [hours,minutes,seconds] = [0,0,0];
 // For capturing current status of the user
 var interval = null; // Do nothing unless user presses start button
 var status = "stopped";
 // for displaing trailing zero...
-let d_seconds = 0;
-let d_minutes = 0;
-let d_hours = 0;
+var [d_hours,d_minutes,d_seconds] =[0,0,0];
 
 const printTime = () => {
   seconds++;
@@ -40,4 +37,12 @@ const startStop = () => {
   }
 };
 
+const reset =()=>{
+  window.clearInterval(interval);
+  [hours,minutes,seconds]=[0,0,0];
+  root.innerHTML = '00:00:00';
+  start_stop.innerHTML = '<i class="fas fa-play"></i>' + " Start";
+}
+
 start_stop.addEventListener("click", startStop);
+redo.addEventListener("click",reset);
