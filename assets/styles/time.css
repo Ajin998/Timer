@@ -44,13 +44,14 @@ body {
     font-family: 'digital-7',
         'Orbitron',
         sans-serif;
+    padding:10px;
     text-align: center;
-    font-size: 9em;
-    margin-top: 200px;
+    font-size: 8em;
+    margin-top: 300px;
     background: white;
     color: black;
-    height: 20vh;
-    width: 50%;
+    height: 15vh;
+    width: 30%;
     border-radius: 20px;
     box-shadow: 0 0 15px rgb(252, 249, 249);
     -webkit-box-reflect: below 20px linear-gradient(transparent, #0003);
